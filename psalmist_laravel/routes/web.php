@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //Routes and navigation
-Route::view('/', 'index')->name('home');
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index' ])->name('home');
 
 Route::view('/about', 'about')->name('about');
 
